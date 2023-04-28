@@ -3,6 +3,7 @@ module github.com/santosh/libp2p-hello-world
 go 1.19
 
 require (
+	github.com/ipfs/go-log/v2 v2.5.1
 	github.com/libp2p/go-libp2p v0.27.1
 	github.com/libp2p/go-libp2p-kad-dht v0.23.0
 	github.com/multiformats/go-multiaddr v0.9.0
@@ -41,7 +42,6 @@ require (
 	github.com/ipfs/go-datastore v0.6.0 // indirect
 	github.com/ipfs/go-ipfs-util v0.0.2 // indirect
 	github.com/ipfs/go-log v1.0.5 // indirect
-	github.com/ipfs/go-log/v2 v2.5.1 // indirect
 	github.com/ipld/go-ipld-prime v0.20.0 // indirect
 	github.com/jackpal/go-nat-pmp v1.0.2 // indirect
 	github.com/jbenet/go-temp-err-catcher v0.1.0 // indirect
