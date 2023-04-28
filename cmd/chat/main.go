@@ -38,7 +38,7 @@ func readData(rw *bufio.ReadWriter) {
 		}
 
 		if str != "\n" {
-			fmt.Printf("\x1b[32m%s\x1b[0m ", str)
+			fmt.Printf("\x1b[32m%s\x1b[0m> ", str)
 		}
 	}
 }
@@ -72,8 +72,8 @@ func main() {
 
 	if *help {
 		fmt.Printf("This program demonstrates a simple p2p chat application using libp2p\n\n")
-		fmt.Println("Usage: Run './chat -sp <SOURCE_PORT>' where <SOURCE_PORT> can ben any port number.")
-		fmt.Println("Now run './chat -d <MUULTIADDR>' where <MULTIADDR> is multiaddress of previous listener host.")
+		fmt.Println("Usage: Run './chat -sp <SOURCE_PORT>' where <SOURCE_PORT> can be any port number.")
+		fmt.Println("Now run './chat -d <MULTIADDR>' where <MULTIADDR> is multiaddress of previous listener host.")
 
 		os.Exit(0)
 	}
@@ -145,7 +145,7 @@ func startPeer(ctx context.Context, h host.Host, streamHandler network.StreamHan
 }
 
 func startPeerAndConnect(ctx context.Context, h host.Host, destination string) (*bufio.ReadWriter, error) {
-	log.Println("This node's multiadresses:")
+	log.Println("This node's multiaddresses:")
 	for _, la := range h.Addrs() {
 		log.Printf(" - %v\n", la)
 	}
